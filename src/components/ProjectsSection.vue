@@ -135,9 +135,11 @@ import IconGithub from "@/components/icons/IconGithub.vue";
 
 useScrollObserver("#projects .reveal");
 
+const base = import.meta.env.BASE_URL;
+
 // Fallback image if project image fails to load
 const handleImageError = (event) => {
-  event.target.src = "/logos/fallback.png";
+  event.target.src = `${base}logos/fallback.png`;
 };
 </script>
 
