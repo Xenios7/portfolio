@@ -72,11 +72,13 @@ import { useScrollObserver } from "@/composables/useScrollObserver.js";
 
 useScrollObserver("#experience .reveal");
 
+const base = import.meta.env.BASE_URL;
+
 const experiences = [
   {
     company: "Bank of Cyprus · Nicosia",
     role: "Software Engineer Intern",
-    logo: "/logos/boc.png",
+    logo: `${base}logos/boc.png`,
     period: "Jun 2026 — Present",
     current: true,
     responsibilities: [
@@ -88,7 +90,7 @@ const experiences = [
   {
     company: "KIOS Research Center · University of Cyprus",
     role: "Software Engineer Intern",
-    logo: "/logos/kios.jpg",
+    logo: `${base}logos/kios.jpg`,
     period: "Jul 2025 — Apr 2026",
     current: false,
     responsibilities: [
@@ -101,7 +103,7 @@ const experiences = [
   {
     company: "IKEA · Nicosia",
     role: "Help Desk",
-    logo: "/logos/ikea.jpg",
+    logo: `${base}logos/ikea.jpg`,
     period: "Jul 2024 — Sep 2024",
     current: false,
     responsibilities: [

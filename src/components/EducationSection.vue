@@ -35,12 +35,14 @@ import { useScrollObserver } from "@/composables/useScrollObserver.js";
 
 useScrollObserver("#education .reveal");
 
+const base = import.meta.env.BASE_URL;
+
 const education = [
   {
     degree: "BSc Computer Science · GPA 8.33",
     institution:
       "University of Cyprus — Distributed Systems, Parallel Computing, OS, Databases, Networks",
-    logo: "/logos/ucy.png",
+    logo: `${base}logos/ucy.png`,
     period: "2022 — 2027 (expected)",
     status: "In progress",
   },
@@ -78,14 +80,18 @@ const education = [
 .edu-card__icon {
   width: 72px;
   height: 72px;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .edu-card__logo {
   width: 60px;
   height: 60px;
+  object-fit: contain;
 }
 .edu-card__content {
   flex: 1;
+  min-width: 0;
 }
 
 .edu-card__degree {
